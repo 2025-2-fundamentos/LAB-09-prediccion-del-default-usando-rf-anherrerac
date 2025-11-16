@@ -143,6 +143,7 @@ def construir_pipeline_optimizacion() -> GridSearchCV:
 def calcular_metricas_rendimiento(nombre_conjunto: str, valores_reales, valores_predichos) -> dict:
     """Calcula métricas de evaluación del modelo."""
     metricas = {
+        "type": "metrics",
         "dataset": nombre_conjunto,
         "precision": precision_score(valores_reales, valores_predichos, zero_division=0),
         "balanced_accuracy": balanced_accuracy_score(valores_reales, valores_predichos),
